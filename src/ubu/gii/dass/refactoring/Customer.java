@@ -41,8 +41,7 @@ public class Customer {
 			// determine amounts for each line
 			thisAmount = aRental.getCharge();
 			
-			frequentRenterPoints = aRental.getFrequentRenterPoints(
-					frequentRenterPoints);
+			frequentRenterPoints += aRental.getFrequentRenterPoints();
 			// show figures for this rental
 			result += "\t" + aRental.getMovie().getTitle() + "\t"
 					+ String.valueOf(thisAmount) + "\n";
