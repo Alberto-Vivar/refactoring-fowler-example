@@ -37,14 +37,14 @@ public class Customer {
 		String result = "Rental Record for " + getName() + "\n";
 		while (rentals.hasNext()) {
 			double thisAmount = 0;
-			Rental each = rentals.next();
+			Rental aRental = rentals.next();
 			// determine amounts for each line
-			thisAmount = each.getCharge();
+			thisAmount = aRental.getCharge();
 			
 			frequentRenterPoints = getFrequentRenterPoints(
-					frequentRenterPoints, each);
+					frequentRenterPoints, aRental);
 			// show figures for this rental
-			result += "\t" + each.getMovie().getTitle() + "\t"
+			result += "\t" + aRental.getMovie().getTitle() + "\t"
 					+ String.valueOf(thisAmount) + "\n";
 			totalAmount += thisAmount;
 		}
